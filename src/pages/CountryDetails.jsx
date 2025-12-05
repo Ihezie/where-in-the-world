@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { useAppData } from "../AppProvider";
 import { useEffect, useState } from "react";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 
 const CountryDetails = () => {
   const { countryName } = useParams();
