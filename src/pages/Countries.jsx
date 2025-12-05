@@ -4,7 +4,7 @@ import Country from "../components/Country";
 import NotFound from "../components/NotFound";
 import { useAppData } from "../AppProvider";
 import { useState, useEffect } from "react";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 
 const Countries = () => {
   const {
