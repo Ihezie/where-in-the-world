@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { useAppData } from "../AppProvider";
 import { useEffect, useState } from "react";
-import loadingGif from "../assets/Rolling-1s-197px (1).gif";
+import Loading from "../components/loading";
 
 const CountryDetails = () => {
   const { countryName } = useParams();
@@ -56,7 +56,9 @@ const CountryDetails = () => {
     return (
       <main>
         <div>
-          <img src={loadingGif} alt="loading" className="mx-auto mt-32" />
+          <div className="mx-auto mt-32 w-min">
+            <Loading />
+          </div>
         </div>
       </main>
     );
