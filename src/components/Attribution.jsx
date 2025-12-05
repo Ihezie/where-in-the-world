@@ -41,6 +41,7 @@ const Attribution = () => {
     >
       Challenge by{" "}
       <a
+        rel="noreferrer"
         href="https://www.frontendmentor.io?ref=challenge"
         target="_blank"
         className="text-blue-600 underline dark:text-blue-300"

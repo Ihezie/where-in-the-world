@@ -1,70 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    * {
-        @apply transition-all text-veryDarkBlue duration-200
-    }
+  * {
+    @apply transition-colors text-veryDarkBlue duration-200;
+  }
 
-    html {
-        font-family: 'Nunito Sans', sans-serif;
-        font-size: 14px;
-        @apply bg-veryLightGray
-    }
+  html {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    @apply bg-veryLightGray;
+  }
 
-    html.dark {
-        @apply bg-veryDarkBlue
-    }
+  html.dark {
+    @apply bg-veryDarkBlue;
+  }
 
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-    ::-webkit-scrollbar-track {
-        background-color: #d4d4d4;
-        border-radius: 10px;
-    }
+  ::-webkit-scrollbar-track {
+    background-color: #d4d4d4;
+    border-radius: 10px;
+  }
 
-    ::-webkit-scrollbar-thumb {
-        height: 120px;
-        background-color: #808e9b;
-        border-radius: 10px;
-    }
+  ::-webkit-scrollbar-thumb {
+    height: 120px;
+    background-color: #808e9b;
+    border-radius: 10px;
+  }
 
-    .dark ::-webkit-scrollbar-track {
-        @apply bg-darkBlue
-    }
+  .dark ::-webkit-scrollbar-track {
+    @apply bg-darkBlue;
+  }
 
-    .dark ::-webkit-scrollbar-thumb {
-        @apply bg-white/25
-    }
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-white/25;
+  }
 }
 
 @layer components {
-    .gray-icon path {
-        @apply text-darkGray
-    }
+  .gray-icon path {
+    @apply text-darkGray;
+  }
 
-    ul.expanded {
-        @apply opacity-100 scale-y-100
-    }
+  ul.expanded {
+    @apply opacity-100;
+  }
 
-    .white-icon path {
-        @apply text-white
-    }
-    .red-icon path{
-        @apply text-red-500
-    }
+  .white-icon path {
+    @apply text-white;
+  }
+  .red-icon path {
+    @apply text-red-500;
+  }
 
-    .details-btn {
-        @apply min-w-[90px] px-2 bg-white py-[5px] rounded shadow-md cursor-pointer font-semibold hover:shadow-lg hover:translate-y-[-5px] dark:bg-darkBlue dark:text-white dark:shadow-black
+  .details-btn {
+    @apply min-w-[90px] transition-transform duration-200 px-2 bg-white py-[5px] rounded shadow-md cursor-pointer font-semibold hover:shadow-lg hover:translate-y-[-5px] dark:bg-darkBlue dark:text-white dark:shadow-black;
+  }
+  @media screen and (max-width: 340px) {
+    .p-5per {
+      padding: 0 5%;
     }
-    @media screen and (max-width: 340px) {
-        .p-5per{
-            padding: 0 5%;
-        }
-    }
+  }
 }

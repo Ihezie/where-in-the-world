@@ -15,7 +15,7 @@ const Country = ({ country }) => {
 
   return (
     <article
-      className="rounded-lg mx-auto overflow-hidden shadow-xl w-full max-w-sm cursor-pointer hover:translate-y-[-16px] dark:shadow-black dark:bg-darkBlue md:mx-0 md:max-w-none"
+      className="rounded-lg transition-transform duration-200 mx-auto overflow-hidden shadow-xl w-full max-w-sm cursor-pointer hover:translate-y-[-16px] dark:shadow-black dark:bg-darkBlue md:mx-0 md:max-w-none"
       onClick={() => {
         handleClick(common);
       }}

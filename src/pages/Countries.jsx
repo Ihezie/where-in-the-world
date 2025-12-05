@@ -3,8 +3,8 @@ import SelectRegion from "../components/SelectRegion";
 import Country from "../components/Country";
 import NotFound from "../components/NotFound";
 import { useAppData } from "../AppProvider";
-import loadingGif from "../assets/Rolling-1s-197px (1).gif";
 import { useState, useEffect } from "react";
+import Loading from "../components/loading";
 
 const Countries = () => {
   const {
@@ -34,7 +34,7 @@ const Countries = () => {
       });
       setLocalData(filteredData.length === 0 ? "no match" : filteredData);
     }
-  }, [loading, region, searchParam]);
+  }, [loading, region, searchParam, data]);
 
   return (
     <main className="max-w-[1700px] mx-auto pb-16">
@@ -44,7 +44,9 @@ const Countries = () => {
       </div>
       {!localData ? (
         <div>
-          <img src={loadingGif} alt="loading" className="mx-auto mt-32" />
+          <div className="mx-auto mt-32 w-min">
+            <Loading />
+          </div>
         </div>
       ) : localData === "no match" ? (
         <NotFound />

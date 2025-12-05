@@ -50,7 +50,7 @@ const SelectRegion = () => {
       <ul
         role="listbox"
         id="select-dropdown"
-        className={`bg-white mt-2 shadow-lg rounded-md overflow-hidden origin-top absolute w-full scale-y-0 opacity-0 duration-[400ms] dark:bg-darkBlue dark:shadow-lg dark:shadow-black/75 ${
+        className={`bg-white mt-2 transition-opacity shadow-lg rounded-md overflow-hidden origin-top absolute w-full opacity-0 duration-[400ms] dark:bg-darkBlue dark:shadow-lg dark:shadow-black/75 ${
           expanded ? "expanded" : ""
         }`}
       >

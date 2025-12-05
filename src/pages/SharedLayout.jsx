@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
-import Attribution from "../components/Attribution";
 import useFetchData from "../useFetchData";
 import { useEffect } from "react";
 import { useAppData } from "../AppProvider";
@@ -18,6 +17,7 @@ const SharedLayout = () => {
   useEffect(() => {
     fetchData(url);
   }, []);
+
   return (
     <>
       <Header />
@@ -35,7 +35,6 @@ const SharedLayout = () => {
       ) : (
         <Outlet />
       )}
-      <Attribution/>
     </>
   );
 };

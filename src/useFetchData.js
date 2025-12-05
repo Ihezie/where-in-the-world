@@ -1,9 +1,7 @@
 import axios from "axios";
 import { useAppData } from "./AppProvider";
-import { useNavigate } from "react-router-dom";
 
 const useFetchData = () => {
-  const navigate = useNavigate();
   const { dispatch } = useAppData();
   return async function (url) {
     try {

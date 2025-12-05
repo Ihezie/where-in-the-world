@@ -21,7 +21,7 @@ const CountryDetails = () => {
         ) || "not found";
       setCountryDetails(country);
     }
-  }, [countryName, loading]);
+  }, [countryName, loading, data]);
 
   const displayDetailsInObjects = (detailsObject, ...properties) => {
     if (detailsObject) {
