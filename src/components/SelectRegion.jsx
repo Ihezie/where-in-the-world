@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useAppData } from "../AppProvider";
 
 const SelectRegion = () => {
@@ -18,6 +18,21 @@ const SelectRegion = () => {
     state: { region },
     dispatch,
   } = useAppData();
+
+  const selectRef = useRef();
+  useEffect(() => {
+    let id;
+    if (!expanded) {
+      id = setTimeout(() => {
+        selectRef.current.style.display = "none";
+      }, 400);
+    } else {
+      selectRef.current.style.display = "block";
+    }
+    () => {
+      clearTimeout(id);
+    };
+  }, [expanded]);
 
   return (
     <div className="mt-12 ml-[5%] relative w-[235px] font-semibold z-10 md:mt-0 md:ml-0">
@@ -48,6 +63,7 @@ const SelectRegion = () => {
         />
       </button>
       <ul
+        ref={selectRef}
         role="listbox"
         id="select-dropdown"
         className={`bg-white mt-2 transition-opacity shadow-lg rounded-md overflow-hidden origin-top absolute w-full opacity-0 duration-[400ms] dark:bg-darkBlue dark:shadow-lg dark:shadow-black/75 ${
@@ -68,6 +84,7 @@ const SelectRegion = () => {
               className="absolute peer opacity-0 z-40"
               onChange={(e) => {
                 dispatch({ type: "FILTER BY REGION", payload: e.target.value });
+                setExpanded(false);
               }}
             />
             <label
